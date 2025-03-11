@@ -13,10 +13,10 @@
             text-align: center;
         }
         header {
-            background-color: #004aad;
+            background-color: #002147;
             color: white;
             padding: 20px;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
         }
         section {
@@ -30,45 +30,56 @@
             text-align: left;
         }
         h2 {
-            color: #004aad;
+            color: #002147;
             text-align: center;
         }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
+        .services {
             display: flex;
-            align-items: center;
-            margin: 10px 0;
-            font-size: 18px;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
-        li img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-        }
-        .contact {
-            display: inline-block;
-            background-color: #004aad;
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .contact:hover {
-            background-color: #003080;
-        }
-        .image-container {
+        .service {
+            width: 48%;
+            margin-bottom: 20px;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin-top: 20px;
+            padding: 10px;
         }
-        .image-container img {
+        .service img {
             width: 100%;
-            max-width: 900px;
-            border-radius: 10px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .service h3 {
+            color: #002147;
+        }
+        .contact-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #002147;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004aad;
         }
     </style>
 </head>
@@ -78,10 +89,6 @@
     ARKAD SARL - Votre partenaire à la portée de vos ambitions
 </header>
 
-<div class="image-container">
-    <img src="https://source.unsplash.com/900x300/?business,office" alt="Bureau entreprise">
-</div>
-
 <section>
     <h2>À propos</h2>
     <p>ARKAD SARL est un cabinet de consulting spécialisé en comptabilité, gestion d'entreprise et management de projet. 
@@ -90,13 +97,28 @@
 
 <section>
     <h2>Nos Services</h2>
-    <ul>
-        <li><img src="https://img.icons8.com/color/48/000000/checkmark.png"/> Tenue de la comptabilité générale</li>
-        <li><img src="https://img.icons8.com/color/48/000000/checkmark.png"/> Conseil en gestion d'entreprise</li>
-        <li><img src="https://img.icons8.com/color/48/000000/checkmark.png"/> Montage DSF & Fiscalité</li>
-        <li><img src="https://img.icons8.com/color/48/000000/checkmark.png"/> Placement du personnel & Formation</li>
-        <li><img src="https://img.icons8.com/color/48/000000/checkmark.png"/> Management des projets</li>
-    </ul>
+    <div class="services">
+        <div class="service">
+            <img src="https://source.unsplash.com/400x200/?accounting" alt="Comptabilité">
+            <h3>Tenue de la comptabilité générale</h3>
+            <p>Gestion des finances et conseils comptables pour entreprises.</p>
+        </div>
+        <div class="service">
+            <img src="https://source.unsplash.com/400x200/?business-meeting" alt="Consulting">
+            <h3>Conseil en gestion d'entreprise</h3>
+            <p>Optimisation des stratégies pour une meilleure rentabilité.</p>
+        </div>
+        <div class="service">
+            <img src="https://source.unsplash.com/400x200/?tax" alt="Fiscalité">
+            <h3>Montage DSF & Fiscalité</h3>
+            <p>Accompagnement pour la déclaration fiscale et conformité.</p>
+        </div>
+        <div class="service">
+            <img src="https://source.unsplash.com/400x200/?teamwork" alt="Formation">
+            <h3>Placement du personnel & Formation</h3>
+            <p>Recrutement et formation en comptabilité et gestion.</p>
+        </div>
+    </div>
 </section>
 
 <section>
@@ -104,9 +126,17 @@
     <p>📍 <strong>En face de la Guinness</strong></p>
     <p>📧 <strong>Email :</strong> <a href="mailto:mouafocharnelle563@gmail.com">mouafocharnelle563@gmail.com</a></p>
     <p>📞 <strong>Téléphone :</strong> +237 679 806 409</p>
-    <a class="contact" href="mailto:mouafocharnelle563@gmail.com">Contactez-nous</a>
+</section>
+
+<section class="contact-form">
+    <h2>Nous Contacter</h2>
+    <form action="mailto:mouafocharnelle563@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Votre Nom" required>
+        <input type="email" name="email" placeholder="Votre Email" required>
+        <textarea name="message" placeholder="Votre Message" rows="5" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
 </section>
 
 </body>
 </html>
-
