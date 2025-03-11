@@ -33,12 +33,12 @@
             color: #002147;
             text-align: center;
         }
-        .services {
+        .services, .blog {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .service {
+        .service, .article {
             width: 48%;
             margin-bottom: 20px;
             background: #fff;
@@ -48,12 +48,12 @@
             text-align: center;
             padding: 10px;
         }
-        .service img {
+        .service img, .article img {
             width: 100%;
             height: 150px;
             object-fit: cover;
         }
-        .service h3 {
+        .service h3, .article h3 {
             color: #002147;
         }
         .contact-form {
@@ -99,24 +99,42 @@
     <h2>Nos Services</h2>
     <div class="services">
         <div class="service">
-            <img src="https://source.unsplash.com/400x200/?accounting" alt="Comptabilité">
+            <img src="https://source.unsplash.com/400x200/?accounting,finance" alt="Comptabilité">
             <h3>Tenue de la comptabilité générale</h3>
             <p>Gestion des finances et conseils comptables pour entreprises.</p>
         </div>
         <div class="service">
-            <img src="https://source.unsplash.com/400x200/?business-meeting" alt="Consulting">
+            <img src="https://source.unsplash.com/400x200/?business,consulting" alt="Consulting">
             <h3>Conseil en gestion d'entreprise</h3>
             <p>Optimisation des stratégies pour une meilleure rentabilité.</p>
         </div>
         <div class="service">
-            <img src="https://source.unsplash.com/400x200/?tax" alt="Fiscalité">
+            <img src="https://source.unsplash.com/400x200/?tax,finance" alt="Fiscalité">
             <h3>Montage DSF & Fiscalité</h3>
             <p>Accompagnement pour la déclaration fiscale et conformité.</p>
         </div>
         <div class="service">
-            <img src="https://source.unsplash.com/400x200/?teamwork" alt="Formation">
+            <img src="https://source.unsplash.com/400x200/?training,education" alt="Formation">
             <h3>Placement du personnel & Formation</h3>
             <p>Recrutement et formation en comptabilité et gestion.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Blog & Publications</h2>
+    <div class="blog">
+        <div class="article">
+            <img src="https://source.unsplash.com/400x200/?money,business" alt="Article 1">
+            <h3>Optimisation de la fiscalité en entreprise</h3>
+            <p>Découvrez comment mieux gérer vos impôts pour maximiser votre rentabilité.</p>
+            <button onclick="window.location.href='#'">Lire plus</button>
+        </div>
+        <div class="article">
+            <img src="https://source.unsplash.com/400x200/?management,team" alt="Article 2">
+            <h3>Les bases du management efficace</h3>
+            <p>Les clés pour une gestion optimale et productive de vos équipes.</p>
+            <button onclick="window.location.href='#'">Lire plus</button>
         </div>
     </div>
 </section>
