@@ -6,7 +6,7 @@
     <title>ARKAD SARL - Votre partenaire à la portée de vos ambitions</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -17,27 +17,58 @@
             color: white;
             padding: 20px;
             font-size: 24px;
+            font-weight: bold;
         }
         section {
             padding: 20px;
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             background: white;
             margin-top: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
         }
         h2 {
             color: #004aad;
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        li img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
         .contact {
+            display: inline-block;
             background-color: #004aad;
             color: white;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
             text-decoration: none;
-            display: inline-block;
+            font-size: 18px;
             margin-top: 10px;
+        }
+        .contact:hover {
+            background-color: #003080;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -47,29 +78,35 @@
     ARKAD SARL - Votre partenaire à la portée de vos ambitions
 </header>
 
+<div class="image-container">
+    <img src="https://source.unsplash.com/900x300/?business,office" alt="Bureau entreprise">
+</div>
+
 <section>
     <h2>À propos</h2>
-    <p>ARKAD SARL est un cabinet de consulting spécialisé en comptabilité, gestion d'entreprise et management de projet. Notre équipe vous accompagne dans votre croissance avec des solutions adaptées.</p>
+    <p>ARKAD SARL est un cabinet de consulting spécialisé en comptabilité, gestion d'entreprise et management de projet. 
+        Notre équipe vous accompagne dans votre croissance avec des solutions adaptées.</p>
 </section>
 
 <section>
     <h2>Nos Services</h2>
     <ul>
-        <li>✅ Tenue de la comptabilité générale</li>
-        <li>✅ Conseil en gestion d'entreprise</li>
-        <li>✅ Montage DSF & Fiscalité</li>
-        <li>✅ Placement du personnel & Formation</li>
-        <li>✅ Management des projets</li>
+        <li><img src="https://img.icons8.com/color/48/000000/checkmark.png"/> Tenue de la comptabilité générale</li>
+        <li><img src="https://img.icons8.com/color/48/000000/checkmark.png"/> Conseil en gestion d'entreprise</li>
+        <li><img src="https://img.icons8.com/color/48/000000/checkmark.png"/> Montage DSF & Fiscalité</li>
+        <li><img src="https://img.icons8.com/color/48/000000/checkmark.png"/> Placement du personnel & Formation</li>
+        <li><img src="https://img.icons8.com/color/48/000000/checkmark.png"/> Management des projets</li>
     </ul>
 </section>
 
 <section>
     <h2>Contact</h2>
-    <p>📍 En face de la Guinness</p>
-    <p>📧 Email : <a href="mailto:mouafocharnelle563@gmail.com">mouafocharnelle563@gmail.com</a></p>
-    <p>📞 Téléphone : +237 679 806 409</p>
+    <p>📍 <strong>En face de la Guinness</strong></p>
+    <p>📧 <strong>Email :</strong> <a href="mailto:mouafocharnelle563@gmail.com">mouafocharnelle563@gmail.com</a></p>
+    <p>📞 <strong>Téléphone :</strong> +237 679 806 409</p>
     <a class="contact" href="mailto:mouafocharnelle563@gmail.com">Contactez-nous</a>
 </section>
 
 </body>
 </html>
+
