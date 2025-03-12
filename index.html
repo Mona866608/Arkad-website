@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARKAD SARL - Votre partenaire en gestion</title>
 
-    <!-- SEO & Référencement -->
     <meta name="description" content="ARKAD SARL - Cabinet de consulting en comptabilité, fiscalité et gestion d'entreprise. Experts en montage DSF, placement du personnel et formation.">
     <meta name="keywords" content="Comptabilité, Fiscalité, Consulting, Gestion d'entreprise, DSF, Formation">
     <meta name="author" content="ARKAD SARL">
@@ -15,8 +14,7 @@
     <meta property="og:image" content="https://source.unsplash.com/1200x600/?business,finance">
     <meta property="og:url" content="https://ton-site.com">
     <link rel="canonical" href="https://ton-site.com">
-
-    <!-- Lien vers le CSS -->
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -92,15 +90,16 @@ Notre mission est de vous aider à structurer et développer votre activité en 
     <p>📞 <strong>Téléphone :</strong> +237 679 806 409</p>
 </section>
 
-<section class="contact-form">
-    <h2>Nous Contacter</h2>
-    <form action="mailto:mouafocharnelle563@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Votre Nom" required>
-        <input type="email" name="email" placeholder="Votre Email" required>
-        <textarea name="message" placeholder="Votre Message" rows="5" required></textarea>
-        <button type="submit">Envoyer</button>
-    </form>
-</section>
+ <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Votre Nom" required>
+            <input type="email" id="email" name="email" placeholder="Votre Email" required>
+            <textarea id="message" name="message" placeholder="Votre Message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+            <p id="formMessage"></p>
+        </form>
+    </section>
 
-</body>
-</html>
+    <script src="script.js"></script>
+
