@@ -35,38 +35,33 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 document.addEventListener("DOMContentLoaded", function () {
     let slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
+    let intervalTime = 5000;
+    let slideInterval;
 
     function showSlides() {
-        
-        slides.forEach(slide => {
-            slide.style.display = "none";
-            slide.classList.remove("fade");
+        slides.forEach((slide, index) => {
+            slide.classList.remove("active");
         });
 
         currentSlide++;
-        if (currentSlide > slides.length) { currentSlide = 1; }
+        if (currentSlide >= slides.length) { currentSlide = 0; }
 
-        slides[currentSlide - 1].style.display = "block";
-        slides[currentSlide - 1].classList.add("fade");
-        
-        setTimeout(showSlides, 3000);
+        slides[currentSlide].classList.add("active");
     }
 
-    showSlides();
-});
-document.addEventListener("DOMContentLoaded", function () {
-    let slides = document.querySelectorAll(".slide");
-    let currentSlide = 0;
+    slideInterval = setInterval(showSlides, intervalTime);
+    function changeSlide(direction) {
+        clearInterval(slideInterval); 
+        slides.forEach(slide => slide.classList.remove("active"));
 
-    function showSlides() {
-        slides.forEach(slide => slide.style.display = "none");
-        currentSlide++;
-        if (currentSlide > slides.length) { currentSlide = 1; }
-        slides[currentSlide - 1].style.display = "block";
-        setTimeout(showSlides, 6000);
+        currentSlide += direction;
+        if (currentSlide < 0) { currentSlide = slides.length - 1; }
+        if (currentSlide >= slides.length) { currentSlide = 0; }
+
+        slides[currentSlide].classList.add("active");
+
+        slideInterval = setInterval(showSlides, intervalTime);
     }
-
-    showSlides();
 
     document.querySelector(".prev").addEventListener("click", function () {
         changeSlide(-1);
