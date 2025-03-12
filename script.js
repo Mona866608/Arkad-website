@@ -1,3 +1,4 @@
+
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -11,14 +12,13 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         formMessage.textContent = "Veuillez remplir tous les champs.";
         return;
     }
-
-    if (!/^[a-zA-Z ]+$/.test(name)) {
+    if (!/^[a-zA-ZÀ-ÿ\s-]+$/.test(name)) {
         formMessage.style.color = "red";
         formMessage.textContent = "Le nom ne doit contenir que des lettres.";
         return;
     }
 
-    if (!/\S+@\S+\.\S+/.test(email)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         formMessage.style.color = "red";
         formMessage.textContent = "Veuillez entrer un email valide.";
         return;
@@ -26,22 +26,30 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
     formMessage.style.color = "green";
     formMessage.textContent = "Message envoyé avec succès !";
+    
     setTimeout(() => { formMessage.textContent = ""; }, 5000);
 
     this.reset();
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     let slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
 
     function showSlides() {
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
+        
+        slides.forEach(slide => {
+            slide.style.display = "none";
+            slide.classList.remove("fade");
+        });
+
+    
         currentSlide++;
         if (currentSlide > slides.length) { currentSlide = 1; }
+
         slides[currentSlide - 1].style.display = "block";
         slides[currentSlide - 1].classList.add("fade");
+        
         setTimeout(showSlides, 3000);
     }
 
