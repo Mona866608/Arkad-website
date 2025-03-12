@@ -30,3 +30,20 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
     this.reset();
 });
+document.addEventListener("DOMContentLoaded", function () {
+    let slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    function showSlides() {
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        currentSlide++;
+        if (currentSlide > slides.length) { currentSlide = 1; }
+        slides[currentSlide - 1].style.display = "block";
+        slides[currentSlide - 1].classList.add("fade");
+        setTimeout(showSlides, 3000);
+    }
+
+    showSlides();
+});
