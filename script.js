@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
             slide.classList.remove("fade");
         });
 
-    
         currentSlide++;
         if (currentSlide > slides.length) { currentSlide = 1; }
 
@@ -54,4 +53,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     showSlides();
+});
+document.addEventListener("DOMContentLoaded", function () {
+    let slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    function showSlides() {
+        slides.forEach(slide => slide.style.display = "none");
+        currentSlide++;
+        if (currentSlide > slides.length) { currentSlide = 1; }
+        slides[currentSlide - 1].style.display = "block";
+        setTimeout(showSlides, 6000);
+    }
+
+    showSlides();
+
+    document.querySelector(".prev").addEventListener("click", function () {
+        changeSlide(-1);
+    });
+
+    document.querySelector(".next").addEventListener("click", function () {
+        changeSlide(1);
+    });
+
+    function changeSlide(direction) {
+        slides.forEach(slide => slide.style.display = "none");
+        currentSlide += direction;
+        if (currentSlide < 1) { currentSlide = slides.length; }
+        if (currentSlide > slides.length) { currentSlide = 1; }
+        slides[currentSlide - 1].style.display = "block";
+    }
 });
