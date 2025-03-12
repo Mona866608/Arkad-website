@@ -1,0 +1,76 @@
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #002147;
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+}
+
+/* Sections */
+section {
+    padding: 40px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Services */
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service {
+    width: 45%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+/* Formulaire */
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #004aad;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #002147;
+}
