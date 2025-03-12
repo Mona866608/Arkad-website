@@ -10,10 +10,12 @@ body {
 
 /* Header */
 header {
-    background-color: #002147;
+    background: linear-gradient(to right, #004aad, #002147);
     color: white;
-    padding: 20px;
+    padding: 30px;
     font-size: 28px;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Sections */
@@ -24,6 +26,11 @@ section {
     background: white;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.02);
 }
 
 /* Services */
@@ -69,8 +76,15 @@ button {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
 button:hover {
     background-color: #002147;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
