@@ -1,64 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARKAD SARL - Accueil</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARKAD SARL - Accueil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" />
 </head>
-<body class="bg-gray-100">
-    <!-- Navbar -->
-    <nav class="bg-blue-900 text-white p-4 fixed w-full z-10 top-0 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">ARKAD SARL</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#about" class="hover:text-yellow-400">À propos</a></li>
-                <li><a href="#services" class="hover:text-yellow-400">Nos Services</a></li>
-                <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="relative h-screen bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?business,office');">
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div class="text-center text-white">
-                <h2 class="text-5xl font-extrabold">Démarquez-vous. Dominez votre secteur.</h2>
-                <p class="text-xl mt-4">Construisons ensemble une marque qui inspire.</p>
-                <a href="#contact" class="mt-6 inline-block bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500">Prenez rendez-vous</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-white text-center">
-        <h2 class="text-4xl font-bold text-blue-900 mb-8">Nos Services</h2>
-        <div class="container mx-auto grid md:grid-cols-3 gap-6">
-            <div class="p-6 bg-gray-100 shadow-lg rounded-lg">
-                <img src="/mnt/data/comptabilité.jpeg" alt="Service comptabilité" class="w-full h-48 object-cover rounded-lg mb-4">
-                <h3 class="text-xl font-semibold">Branding & Identité</h3>
-                <p class="mt-2">Développez une image forte et mémorable.</p>
-            </div>
-            <div class="p-6 bg-gray-100 shadow-lg rounded-lg">
-                <h3 class="text-xl font-semibold">Marketing Digital</h3>
-                <p class="mt-2">Stratégies pour améliorer votre visibilité.</p>
-            </div>
-            <div class="p-6 bg-gray-100 shadow-lg rounded-lg">
-                <h3 class="text-xl font-semibold">Développement Web</h3>
-                <p class="mt-2">Création de sites performants et optimisés.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-100 text-center">
-        <h2 class="text-4xl font-bold text-blue-900 mb-8">Contactez-nous</h2>
-        <form class="max-w-lg mx-auto bg-white p-8 shadow-lg rounded-lg">
-            <input type="text" placeholder="Nom" class="w-full p-2 mb-4 border rounded" required>
-            <input type="email" placeholder="Email" class="w-full p-2 mb-4 border rounded" required>
-            <textarea placeholder="Message" class="w-full p-2 mb-4 border rounded" rows="4" required></textarea>
-            <button class="w-full bg-blue-900 text-white py-2 rounded hover:bg-blue-700">Envoyer</button>
-        </form>
-    </section>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-blue-900 text-white p-4 fixed w-full z-10 top-0 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">ARKAD SARL</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#about" class="hover:text-yellow-400">À propos</a></li>
+        <li><a href="#services" class="hover:text-yellow-400">Nos Services</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Hero -->
+  <header class="relative h-screen bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?business,team');">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div class="text-center text-white px-4">
+        <h2 class="text-4xl md:text-5xl font-extrabold">Démarquez-vous. Dominez votre secteur.</h2>
+        <p class="text-lg mt-4">Construisons ensemble une marque qui inspire.</p>
+        <a href="#contact" class="mt-6 inline-block bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500">Prenez rendez-vous</a>
+      </div>
+    </div>
+  </header>
+  <!-- Services -->
+  <section id="services" class="py-20 bg-white text-center">
+    <h2 class="text-4xl font-bold text-blue-900 mb-12">Nos Services</h2>
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+      <!-- Service 1 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/3208/3208716.png" alt="Comptabilité" class="w-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-blue-800">Service Comptabilité</h3>
+        <p class="mt-2 text-sm">Tenue de comptabilité, fiscalité, états financiers & conseils personnalisés.</p>
+      </div>
+      <!-- Service 2 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149625.png" alt="Marketing" class="w-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-blue-800">Marketing Digital</h3>
+        <p class="mt-2 text-sm">Stratégies SEO, réseaux sociaux, email marketing, publicité ciblée.</p>
+      </div>
+      <!-- Service 3 -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+        <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Web" class="w-16 mx-auto mb-4">
+        <h3 class="text-xl font-semibold text-blue-800">Développement Web</h3>
+        <p class="mt-2 text-sm">Création de sites vitrines, e-commerce, responsive et optimisés.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-100 text-center">
+    <h2 class="text-4xl font-bold text-blue-900 mb-8">Contactez-nous</h2>
+    <form id="contactForm" class="max-w-lg mx-auto bg-white p-8 shadow-lg rounded-lg">
+      <input type="text" id="name" placeholder="Votre nom" class="w-full p-3 mb-4 border rounded" required />
+      <input type="email" id="email" placeholder="Votre email" class="w-full p-3 mb-4 border rounded" required />
+      <textarea id="message" placeholder="Votre message" class="w-full p-3 mb-4 border rounded" rows="5" required></textarea>
+      <button type="submit" class="w-full bg-blue-900 text-white py-3 rounded hover:bg-blue-700 transition">Envoyer</button>
+      <p id="formMessage" class="mt-4 text-sm"></p>
+    </form>
+  </section>
+  <!-- Script -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const formMessage = document.getElementById("formMessage");
+      if (!name || !email || !message) {
+        formMessage.textContent = "Tous les champs sont obligatoires.";
+        formMessage.style.color = "red";
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        formMessage.textContent = "Adresse email invalide.";
+        formMessage.style.color = "red";
+        return;
+      }
+      formMessage.textContent = "Merci pour votre message !";
+      formMessage.style.color = "green";
+      this.reset();
+      setTimeout(() => { formMessage.textContent = ""; }, 5000);
+    });
+  </script>
 </body>
 </html>
+
